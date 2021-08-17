@@ -283,8 +283,10 @@ class CreateObjects(MethodCall):
 
     def __init__(self, **kw):
         objs = []
-
+        print("[INVENTORY_LOG]createObjects started")
+        
         for path, interfaces in kw.pop('objs').items():
+            print("[INVENTORY_LOG]path = ", path)
             key_o = TrivialArgument(
                 value=path,
                 type='string',
